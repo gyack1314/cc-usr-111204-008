@@ -1,0 +1,49 @@
+{
+  "generation": "inventory-2030-01-02",
+  "schema": [
+    "bucket",
+    "key",
+    "version_id",
+    "is_latest",
+    "delete_marker"
+  ],
+  "shards": [
+    {
+      "key": "inventory/part-0",
+      "file": "inventory.csv.gz",
+      "bytes": 79,
+      "sha256": "28202cb822196402540ca78116a82c0efbbc16fd2530735fec53327ddf7ae441"
+    }
+  ],
+  "objects": [
+    {
+      "bucket": "trial",
+      "key": "run/a+b.txt",
+      "version_id": "v1",
+      "file": "object-v1.bin",
+      "checksum_type": "FULL_OBJECT",
+      "sha256": "98bf20339d6e71b584357945d632324698de086aed9d28f29534c49b264ae88b"
+    },
+    {
+      "bucket": "trial",
+      "key": "run/a+b.txt",
+      "version_id": "v2",
+      "file": "object-v2.bin",
+      "checksum_type": "COMPOSITE",
+      "parts": [
+        {
+          "number": 1,
+          "size": 3,
+          "sha256": "11507a0e2f5e69d5dfa40a62a1bd7b6ee57e6bcd85c67c9b8431b36fff21c437"
+        },
+        {
+          "number": 2,
+          "size": 4,
+          "sha256": "b1621a89d022230d6b31c04838f7743f031f7471d5166f511fb3ed6ca537bc93"
+        }
+      ]
+    }
+  ],
+  "collect_history": true,
+  "max_parallel": 2
+}
